@@ -1,3 +1,4 @@
+/** The component class, written in TS */
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 

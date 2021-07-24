@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Valentinas Tex Mex BBQ",
+    "display_phone": "512-799-0207",
+    "address": "11500 Menchaca Rd, Austin, TX 78748",
+    "rating": 4.5,
+    "price": "$$",
+    "type": "BBQ"
+  },
+  {
+    "name": "Revolution Vegan Kitchen",
+    "display_phone": "512-538-7318",
+    "address": "7800 S 1st St, Austin, TX 78745",
+    "rating": 3.9,
+    "price": "$$",
+    "type": "Vegan"
+  },
+    {
+    "name": "Craft Woodfire Pizza",
+    "display_phone": "512-200-4032",
+    "address": "3901 Promontory Point Dr, Austin, TX 78744",
+    "rating": 4.5,
+    "price": "$$",
+    "type": "Pizza"
+  },
+    {
+    "name": "Rositas Food Truck",
+    "display_phone": "512-442-8402",
+    "address": "1911 E Riverside Dr, Austin TX 78741",
+    "rating": 4.6,
+    "price": "$",
+    "type": "Tacos"
+  }
+]
