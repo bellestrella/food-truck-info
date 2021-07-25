@@ -1,21 +1,33 @@
 <!-- Changes -->
 <div class="container">
-
-  <!-- -->
-
-
-  <!-- Add the data binding to the new foodtruck 
-property we created inside of the component. 
-When you are ready to display this, you must add it
-to the app.component.html -->
-  <h2>Foodtruck Details</h2>
-  <!--
-    <div><span>name: </span> {{food.name}}</div>
-    <div><span>phone: </span> {{food.phone}}</div>
- -->
-
-  <body>
-    <br>
-  </body>
-
+  <h2>Business Details</h2>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Phone Number</th>
+        <th>Address</th>
+        <th>Rating</th>
+        <th>Price</th>
+        <th>Type</th>
+        <th>Info</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let trucks of listOfFoodTrucks">
+        <td><span>{{trucks.name}}</span></td>
+        <td><span>{{trucks.display_phone}}</span></td>
+        <td><span>{{trucks.address}}</span></td>
+        <td><span>{{trucks.rating}}</span></td>
+        <td><span>{{trucks.price}}</span></td>
+        <td><span>{{trucks.type}}</span></td>
+        <td>
+          <button class="btn btn-sm btn-info">
+            <i class="fa fa-search"></i>Hours</button>
+          <button class="btn btn-sm btn-warning">
+            <i class="fa fa-edit"></i>Menu</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>

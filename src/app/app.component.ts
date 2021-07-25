@@ -20,7 +20,7 @@ interface foodTrucks{
 })
 
 export class AppComponent {
-  title = 'Displaying Business Info';
+  title = 'Food Truck Finder';
 
   /** Here, we create an array of Foodtrucks
    * that is called "allTrucks". The data that

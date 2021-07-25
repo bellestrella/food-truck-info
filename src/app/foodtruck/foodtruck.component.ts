@@ -24,6 +24,7 @@ import { Foodtruck } from '../foodtruck';
 // Changes. //
 export class FoodTruck {
   constructor(
+    public id: Number,
     public name: String,
     public display_phone: String,
     public address: String,
@@ -45,7 +46,7 @@ export class FoodTruck {
 
 export class FoodtruckComponent implements OnInit {
 
-  //Changes//
+  //variable listoffoodtrucks of type FoodTruck//
   listOfFoodTrucks: FoodTruck[] = [];
   //Changes//
 

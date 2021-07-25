@@ -8,39 +8,3 @@ foodtruck component, so we add an app foodtruck element to
 the AppComponent template file. -->
 <h1>{{title}}</h1>
 <app-foodtruck></app-foodtruck>
-<div class="container">
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Phone</th>
-        <th>Address</th>
-        <th>Rating</th>
-        <th>Price</th>
-        <th>Type</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- Displaying all restaurants by
-        Looping through an array of allTrucks-->
-      <tr *ngFor="let info of allTrucks ">
-        <td>{{ info.name }}</td>
-        <td>{{ info.display_phone }}</td>
-        <td>{{ info.address }}</td>
-        <td>{{ info.rating }}</td>
-        <td>{{ info.price }}</td>
-        <td>{{ info.type }}</td>
-      </tr>
-      <!-- Displaying one restaurant at a time 
-      
-      <tr>
-        <td>{{ allTrucks[0].name }}</td>
-        <td>{{ allTrucks[0].display_phone }}</td>
-        <td>{{ allTrucks[0].address }}</td>
-        <td>{{ allTrucks[0].rating }}</td>
-        <td>{{ allTrucks[0].price }}</td>
-        <td>{{ allTrucks[0].type }}</td>
-      </tr>-->
-    </tbody>
-  </table>
-</div>
