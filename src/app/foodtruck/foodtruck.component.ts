@@ -17,8 +17,23 @@
  * 
  * Always export the class so you can import it where need be
  */
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Foodtruck } from '../foodtruck';
+
+// Changes. //
+export class FoodTruck {
+  constructor(
+    public name: String,
+    public display_phone: String,
+    public address: String,
+    public rating: Number,
+    public price: String,
+    public type: String,
+  ) {
+  }
+}
+// Changes //
 
 
 @Component({
@@ -30,15 +45,28 @@ import { Foodtruck } from '../foodtruck';
 
 export class FoodtruckComponent implements OnInit {
 
-  food: Foodtruck = {
-    name: 'Valentinas Tex Mex BBQ',
-    phone: '+15122214248'
-  };
+  //Changes//
+  listOfFoodTrucks: FoodTruck[] = [];
+  //Changes//
 
-  constructor() { }
+  //Changes - added parameter so delete just in case later//
+  constructor(private httpClient: HttpClient) { }
 
   ngOnInit(): void {
+    //debugging
+    console.log('hello!');
+    //for getFoodtrucks() to run, you must call it here.
+    this.getFoodtrucks();
   }
 
+  // Changes - Adding this method //
+  getFoodtrucks(){
+    console.log('Inside of the getFoodTrucks() method...');
+    this.httpClient.get<any>('http://localhost:3000/restaurants').subscribe(
+      response => {
+      console.log(response);
+      this.listOfFoodTrucks = response;
+    }
+    );
+  }
 }
-
