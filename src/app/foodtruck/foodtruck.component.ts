@@ -21,6 +21,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Foodtruck } from '../foodtruck';
 
+
 // Changes. //
 export class FoodTruck {
   constructor(
@@ -63,7 +64,7 @@ export class FoodtruckComponent implements OnInit {
   // Changes - Adding this method //
   getFoodtrucks(){
     console.log('Inside of the getFoodTrucks() method...');
-    this.httpClient.get<any>('http://localhost:3000/restaurants').subscribe(
+    this.httpClient.get<any>('http://localhost:8080/FoodTruckFinder_war/foodtrucks').subscribe(
       response => {
       console.log(response);
       this.listOfFoodTrucks = response;
